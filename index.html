@@ -111,7 +111,7 @@ function initialize()
 	for (let i = 0; i < 4; i++)
 	{
 		let loader = new THREE.TextureLoader();
-		let texture = loader.load( "images/" + colorArray[i] + ".png" );
+		let texture = loader.load( "images/" + colorArray[i] + ".jpg" );
 		
 		let markerRoot = new THREE.Group();
 		scene.add(markerRoot);
@@ -121,7 +121,7 @@ function initialize()
 		
 		let mesh = new THREE.Mesh( 
 			new THREE.PlaneBufferGeometry(1,1, 4,4),
-			new THREE.MeshBasicMaterial({ map:texture, transparent:true, opacity:0.5}) 
+			new THREE.MeshBasicMaterial({ map:texture, transparent:true }) 
 		);
 		markerRoot.add( mesh );
 		mesh.rotation.x = -Math.PI/2;
@@ -134,8 +134,6 @@ function update()
 {
 	if ( arToolkitSource.ready !== false ) {
 		arToolkitContext.update( arToolkitSource.domElement );
-	} else {
-		// 
 	}
 }
 
