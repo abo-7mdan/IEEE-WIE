@@ -126,11 +126,11 @@ function initialize()
 
 function update()
 {
-	// update artoolkit on every frame
-	if ( arToolkitSource.ready !== false )
+	if ( arToolkitSource.ready !== false ) {
 		arToolkitContext.update( arToolkitSource.domElement );
-	else 
+	} else {
 		alert ( "Hello" )
+	}
 }
 
 
@@ -145,7 +145,7 @@ function animate()
 	requestAnimationFrame(animate);
 	deltaTime = clock.getDelta();
 	totalTime += deltaTime;
-	setInterval(update, 5000);
+	update();
 	render();
 }
 
