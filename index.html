@@ -34,8 +34,7 @@ var mesh1;
 var mesh2;
 var mesh3;
 
-var link = "images/earth.jpg";
-alert("update 3x");
+var link = "images/red.jpg";
 	
 initialize();
 animate();
@@ -166,13 +165,22 @@ function initialize()
 
 function update()
 {
-	// update artoolkit on every frame
-	if ( arToolkitSource.ready !== false )
-		arToolkitContext.update( arToolkitSource.domElement );
-		alert(arToolkitSource.domElement);
-	else
-		if ( arToolkitSource.domElement == mesh2 )
-			link = "images/one.jpg";
+
+if ( arToolkitSource.ready !== false )
+	arToolkitContext.update( arToolkitSource.domElement );
+	
+	var nummtion = 0;
+	nummtion=nummtion+1
+	if(nummtion==20)
+		link = "images/red.jpg";
+	   else if (nummtion==40)
+		  link = "images/green.jpg";
+	else if ( nummtion == 60 )
+		link = "images/blue.jpg";
+	else if ( nummtion == 80 )
+		link = "images/yellow.jpg";
+	else if ( nummtion > 100 )
+		link = "images/earth.jpg";
 }
 
 
