@@ -35,7 +35,7 @@ var mesh2;
 var mesh3;
 
 var link = "images/red.jpg";
-alert("xm")
+alert("xm");
 	
 initialize();
 animate();
@@ -170,7 +170,7 @@ function update()
 
 if ( arToolkitSource.ready !== false ) {
 	arToolkitContext.update( arToolkitSource.domElement );
-	nummtion=nummtion+1
+	nummtion=nummtion+1;
 	if(nummtion==20)
 		link = "images/red.jpg";
 	   else if (nummtion==40)
@@ -179,7 +179,7 @@ if ( arToolkitSource.ready !== false ) {
 		link = "images/blue.jpg";
 	else if ( nummtion == 80 )
 		link = "images/yellow.jpg";
-	else if ( nummtion > 100 ) {
+	else if ( nummtion > 100 )
 		link = "images/earth.jpg";
 	} else {
 		nummtion = 0;
