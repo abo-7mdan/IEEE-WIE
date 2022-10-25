@@ -35,7 +35,7 @@ var mesh2;
 var mesh3;
 
 var link = "images/earth.jpg";
-alert("update 2");
+alert("update 3");
 	
 initialize();
 animate();
@@ -169,9 +169,9 @@ function update()
 	// update artoolkit on every frame
 	if ( arToolkitSource.ready !== false )
 		arToolkitContext.update( arToolkitSource.domElement );
+		alert(arToolkitSource.domElement);
 	else
 		if ( arToolkitSource.domElement == mesh2 )
-			alert("alert 2");
 			link = "images/one.jpg";
 }
 
