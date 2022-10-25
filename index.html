@@ -127,7 +127,7 @@ function initialize()
 	markerRoot2 = new THREE.Group();
 	scene.add(markerRoot2);
 	let markerControls2 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot2, {
-		type: 'pattern', patternUrl: "data/letterA.patt",
+		type: 'pattern', patternUrl: "data/letterB.patt",
 	})
 
 	let geometry2 = new THREE.PlaneBufferGeometry(1,1, 4,4);
@@ -139,6 +139,23 @@ function initialize()
 	mesh2.rotation.x = -Math.PI/2;
 	
 	markerRoot2.add( mesh2 );
+	
+	// 
+	markerRoot3 = new THREE.Group();
+	scene.add(markerRoot3);
+	let markerControls3 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot3, {
+		type: 'pattern', patternUrl: "data/letterC.patt",
+	})
+
+	let geometry3 = new THREE.PlaneBufferGeometry(1,1, 4,4);
+	let loader3 = new THREE.TextureLoader();
+	let texture3 = loader3.load( 'images/negative.jpg', render );
+	let material3 = new THREE.MeshBasicMaterial( { map: texture3 } );
+	
+	mesh3 = new THREE.Mesh( geometry3, material3 );
+	mesh3.rotation.x = -Math.PI/2;
+	
+	markerRoot3.add( mesh3 );
 }
 
 
