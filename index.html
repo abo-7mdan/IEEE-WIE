@@ -35,6 +35,7 @@ var mesh2;
 var mesh3;
 
 var link = "images/red.jpg";
+alert("xm")
 	
 initialize();
 animate();
@@ -162,14 +163,13 @@ function initialize()
 	markerRoot3.add( mesh3 );
 }
 
+	var nummtion = 0;
 
 function update()
 {
 
-if ( arToolkitSource.ready !== false )
+if ( arToolkitSource.ready !== false ) {
 	arToolkitContext.update( arToolkitSource.domElement );
-	
-	var nummtion = 0;
 	nummtion=nummtion+1
 	if(nummtion==20)
 		link = "images/red.jpg";
@@ -179,8 +179,11 @@ if ( arToolkitSource.ready !== false )
 		link = "images/blue.jpg";
 	else if ( nummtion == 80 )
 		link = "images/yellow.jpg";
-	else if ( nummtion > 100 )
+	else if ( nummtion > 100 ) {
 		link = "images/earth.jpg";
+	} else {
+		nummtion = 0;
+	}
 }
 
 
